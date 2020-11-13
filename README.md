@@ -13,4 +13,4 @@ Pour demarrer l'Application
 Client : Go to /Application Client and run : **npm install**  and **npm run start**
 
 
-Server: Go to /Server/Complete and run : **mvn spring-boot:run** and   **mvn clean package** 
+Server: Go to /Server/Complete and run : **mvn clean package** and   **mvn spring-boot:run**  
