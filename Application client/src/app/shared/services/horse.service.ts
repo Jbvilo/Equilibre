@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class HorseService {
-horselist;
+    horselist;
     constructor(private router: Router, private http: HttpClient) { }
 
 
@@ -23,17 +23,18 @@ horselist;
     }
 
     gethorses() {
-this.http.get<any>('http://localhost:8080/horse').subscribe(data => {
+        this.http.get<any>('http://localhost:8080/horse').subscribe(data => {
             console.log(data)
-        this.horselist=data._embedded.horse;
+            this.horselist = data._embedded.horse;
 
-    }) }
+        })
+    }
 
 
-    gethorseslit(){
+    gethorseslit() {
         return this.horselist;
     }
- 
+
 
 
 }

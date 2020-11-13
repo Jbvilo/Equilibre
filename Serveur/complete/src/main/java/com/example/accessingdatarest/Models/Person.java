@@ -5,10 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
-
-
-
 @Entity
 public class Person {
 
@@ -23,26 +19,20 @@ public class Person {
 	private String licencenumber;
 	private String role;
 
-
-	
-	protected Person() {}
-
-	public Person(String firstName, String lastName,String email,String password,String role,String phonenumber, String licencenumber) {
-	  this.firstName = firstName;
-	  this.lastName = lastName;
-	  this.email= email;
-	  this.password=password;
-	  this.role=role;
-	  this.phonenumber=phonenumber;
-	  this.licencenumber=licencenumber;
-	
+	protected Person() {
 	}
 
+	public Person(String firstName, String lastName, String email, String password, String role, String phonenumber,
+			String licencenumber) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.phonenumber = phonenumber;
+		this.licencenumber = licencenumber;
 
-	
-
-
-
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -52,7 +42,6 @@ public class Person {
 		this.firstName = firstName;
 	}
 
-
 	public String getLastName() {
 		return lastName;
 	}
@@ -60,6 +49,7 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -67,7 +57,6 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 
 	public String getPassword() {
 		return password;
@@ -77,7 +66,6 @@ public class Person {
 		this.password = password;
 	}
 
-	
 	public String getRole() {
 		return role;
 	}
@@ -86,26 +74,20 @@ public class Person {
 		this.role = role;
 	}
 
+	public String getPhonenumber() {
+		return phonenumber;
+	}
 
-public String getPhonenumber() {
-	return phonenumber;
-}
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
 
-public void setPhonenumber(String phonenumber) {
-	this.phonenumber = phonenumber;
-}
+	public String getLicencenumber() {
+		return licencenumber;
+	}
 
-	
-public String getLicencenumber() {
-	return licencenumber;
-}
-
-public void setLicencenumber(String licencenumber) {
-	this.licencenumber = licencenumber;
-}
-
-
-
-
+	public void setLicencenumber(String licencenumber) {
+		this.licencenumber = licencenumber;
+	}
 
 }

@@ -45,8 +45,8 @@ export class NotAuthorizedContainerComponent {
     CommonModule,
     RouterModule,
     SingleCardModule,
-    
-    
+
+
   ],
   declarations: [NotAuthorizedContainerComponent],
   exports: [NotAuthorizedContainerComponent]

@@ -11,11 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
-
-
-
-
 @Entity
 public class Lesson {
 
@@ -28,16 +23,17 @@ public class Lesson {
     private String level;
     private String starttime;
     private String endtime;
-    @ElementCollection 
+    @ElementCollection
     private List<String> student;
-    @ElementCollection 
+    @ElementCollection
     private Set<Horse> horses;
     private String nbreleve;
 
     protected Lesson() {
     }
 
-    public Lesson(String Titre,String moniteur,String level, Date date, String starttime, String endtime, List<String> student,Set<Horse> horses ,String nbreleve) {
+    public Lesson(String Titre, String moniteur, String level, Date date, String starttime, String endtime,
+            List<String> student, Set<Horse> horses, String nbreleve) {
         this.moniteur = moniteur;
         this.Titre = Titre;
         this.date = date;
@@ -45,8 +41,8 @@ public class Lesson {
         this.endtime = endtime;
         this.student = student;
         this.horses = horses;
-        this.level=level;
-        this.nbreleve=nbreleve;
+        this.level = level;
+        this.nbreleve = nbreleve;
     }
 
     public String getMoniteur() {
@@ -89,22 +85,22 @@ public class Lesson {
         this.endtime = endtime;
     }
 
-    public  List<String> getStudent() {
+    public List<String> getStudent() {
         return student;
     }
 
     public void setStudent(List<String> student) {
-        this.student=student;
+        this.student = student;
     }
 
-    
-    public  Set<Horse> getHorses() {
+    public Set<Horse> getHorses() {
         return horses;
     }
 
     public void setHorses(Set<Horse> horses) {
         this.horses.add((Horse) horses);
     }
+
     public void setLevel(String level) {
         this.level = level;
     }
@@ -112,13 +108,13 @@ public class Lesson {
     public String getLevel() {
         return level;
     }
+
     public String getNbreleve() {
         return nbreleve;
     }
-    
+
     public void setNbreleve(String nbreleve) {
         this.nbreleve = nbreleve;
     }
-    
 
 }

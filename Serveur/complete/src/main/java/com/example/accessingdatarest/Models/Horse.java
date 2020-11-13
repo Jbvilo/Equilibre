@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 @Entity
 public class Horse {
 
@@ -16,17 +17,14 @@ public class Horse {
 	private String firstName;
 	private Date birthdate;
 
-
-
-
-	
-    protected Horse() {
-    }
-
-    public Horse(String firstName,Date birthdate) {
-        this.firstName = firstName;
-        this.birthdate = birthdate;
+	protected Horse() {
 	}
+
+	public Horse(String firstName, Date birthdate) {
+		this.firstName = firstName;
+		this.birthdate = birthdate;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
